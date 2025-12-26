@@ -1,15 +1,6 @@
-/**
- * QQ音乐 API - EdgeOne Pages Node Functions 入口
- */
-import express from 'express';
-import path from 'path';
-import fs from 'fs';
-import { fileURLToPath } from 'url';
-import { createRequire } from 'module';
-
-const require = createRequire(import.meta.url);
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const express = require('express');
+const path = require('path');
+const fs = require('fs');
 
 const app = express();
 
@@ -114,4 +105,4 @@ app.use((req, res) => {
 });
 
 // 导出 Express 实例
-export default app;
+module.exports = app;
