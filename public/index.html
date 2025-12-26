@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QQ音乐 API</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #31c27c 0%, #1db954 100%); min-height: 100vh; padding: 40px 20px; }
+    .container { max-width: 900px; margin: 0 auto; }
+    h1 { color: #fff; text-align: center; margin-bottom: 10px; font-size: 2.5em; }
+    .subtitle { color: rgba(255,255,255,0.9); text-align: center; margin-bottom: 40px; }
+    .card { background: #fff; border-radius: 12px; padding: 30px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    .card h2 { color: #333; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #31c27c; }
+    .api-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; }
+    .api-item { background: #f8f9fa; padding: 12px 16px; border-radius: 8px; font-family: monospace; font-size: 14px; color: #333; transition: all 0.2s; }
+    .api-item:hover { background: #31c27c; color: #fff; transform: translateX(5px); }
+    .footer { text-align: center; color: rgba(255,255,255,0.8); margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎵 QQ音乐 API</h1>
+    <p class="subtitle">Node.js 版本 - 支持 Vercel / EdgeOne 部署</p>
+    
+    <div class="card">
+      <h2>🔍 搜索</h2>
+      <div class="api-list">
+        <div class="api-item">GET /search?keyword=周杰伦</div>
+        <div class="api-item">GET /search/hotkey</div>
+        <div class="api-item">GET /search/complete?keyword=周</div>
+        <div class="api-item">GET /search/general?keyword=周杰伦</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🎵 歌曲</h2>
+      <div class="api-list">
+        <div class="api-item">GET /song/detail?mid=xxx</div>
+        <div class="api-item">GET /song/url?mid=xxx</div>
+        <div class="api-item">GET /song/similar?id=xxx</div>
+        <div class="api-item">GET /lyric?mid=xxx</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>👤 歌手</h2>
+      <div class="api-list">
+        <div class="api-item">GET /singer/detail?mid=xxx</div>
+        <div class="api-item">GET /singer/songs?mid=xxx</div>
+        <div class="api-item">GET /singer/albums?mid=xxx</div>
+        <div class="api-item">GET /singer/list</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>💿 专辑 & 歌单</h2>
+      <div class="api-list">
+        <div class="api-item">GET /album/detail?mid=xxx</div>
+        <div class="api-item">GET /album/songs?mid=xxx</div>
+        <div class="api-item">GET /songlist/detail?id=xxx</div>
+        <div class="api-item">GET /songlist/category</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>📊 排行榜 & 推荐</h2>
+      <div class="api-list">
+        <div class="api-item">GET /top/category</div>
+        <div class="api-item">GET /top/detail?id=xxx</div>
+        <div class="api-item">GET /recommend/home</div>
+        <div class="api-item">GET /recommend/new/songs</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🎬 MV</h2>
+      <div class="api-list">
+        <div class="api-item">GET /mv/detail?vid=xxx</div>
+        <div class="api-item">GET /mv/url?vid=xxx</div>
+        <div class="api-item">GET /mv/recommend</div>
+        <div class="api-item">GET /mv/rank</div>
+      </div>
+    </div>
+
+    <p class="footer">访问 <a href="/" style="color:#fff">/</a> 获取完整 API 列表</p>
+  </div>
+</body>
+</html>
