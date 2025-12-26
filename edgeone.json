@@ -1,10 +1,10 @@
 {
-  "build": {
-    "installCommand": "npm install",
-    "command": "",
-    "output": "public"
-  },
-  "functions": {
-    "directory": "node-functions"
+  "installCommand": "npm install",
+  "node-functions": {
+    "included_files": [
+      "module/**",
+      "util/**",
+      "public/**"
+    ]
   }
 }
