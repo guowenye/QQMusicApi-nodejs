@@ -3,5 +3,8 @@
     "installCommand": "npm install",
     "command": "",
     "output": "public"
+  },
+  "functions": {
+    "directory": "node-functions"
   }
 }
